@@ -20,6 +20,12 @@ public interface AudioDao {
     @Query("SELECT * FROM Audio WHERE song = :song")
     Audio getAudioBySong(String song);
 
+    @Query("SELECT * FROM Audio WHERE played = :played")
+    List<Audio> getAudioPlayedHistory(boolean played);
+
+    @Query("SELECT * FROM Audio WHERE favorite = :favorite")
+    List<Audio> getFavoriteAudioList(boolean favorite);
+
     @Query("SELECT * FROM Audio")
     List<Audio> getAudioList();
 

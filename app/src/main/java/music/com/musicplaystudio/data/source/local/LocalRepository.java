@@ -28,15 +28,37 @@ public class LocalRepository {
         executor.execute(runnable);
     }
 
-    public void insertAudio(final Audio body) {
+    public void getAudioHistoryList(final GetAudioListCallBack callback) {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                audioDao.insertAudio(body);
+                callback.onAudioLoaded(audioDao.getAudioPlayedHistory(true));
+            }
+        };
+        executor.execute(runnable);
+    }
+
+    public void getFavoriteAudioList(final GetAudioListCallBack callback) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                callback.onAudioLoaded(audioDao.getFavoriteAudioList(true));
             }
         };
         executor.execute(runnable);
     }
 
 
+
+    public void addAudio(final Audio body) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if(audioDao.updateAudio(body) == 0) {
+                    audioDao.insertAudio(body);
+                }
+            }
+        };
+        executor.execute(runnable);
+    }
 }

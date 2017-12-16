@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_dark"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/natural_paper"
+        android:elevation="@dimen/default_elevation"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_olaplay"
+                android:textColor="@android:color/black"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_studios"
+                android:textColor="@android:color/black"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/darker_gray"
+            android:padding="5dp" />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/openHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/layout_round_bg"
+                android:text="@string/history"
+                android:layout_marginStart="5dp"
+                android:elevation="@dimen/default_elevation"
+                android:layout_alignParentEnd="true"
+                android:drawableStart="@drawable/ic_time"
+                android:drawablePadding="2dp"/>
+
+            <TextView
+                android:id="@+id/openFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/layout_round_bg"
+                android:layout_toStartOf="@+id/openHistory"
+                android:text="@string/favorite"
+                android:elevation="@dimen/default_elevation"
+                android:drawableStart="@drawable/favorite"
+                android:drawablePadding="2dp"/>
+
+        </RelativeLayout>
+
+        <com.darwindeveloper.wcviewpager.WCViewPagerIndicator
+            android:id="@+id/wcviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:indicatorSelectedColor="@color/colorPrimary"
+            app:indicatorsColor="#d2d2d2"
+            app:numberSelectedColor="#fff"
+            app:numbersColor="@color/colorPrimary"
+            app:showNumbers="true" />
+
+        <!-- Here is the view to show if the list is emtpy -->
+        <TextView
+            android:id="@+id/empty_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_padding"
+            android:text="@string/empty_list_msg"
+            android:textSize="@dimen/text_size" />
+    </LinearLayout>
+
+</LinearLayout>

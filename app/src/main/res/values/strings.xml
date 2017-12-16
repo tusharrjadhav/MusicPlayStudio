@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MusicPlayStudio</string>
     <string name="music_player">Music Player</string>
+    <string name="empty_list_msg">No Songs available</string>
+    <string name="text_studios">STUDIOS</string>
+    <string name="text_olaplay">OLAPLAY</string>
+    <string name="history">History</string>
+    <string name="favorite">Favorite</string>
+    <string name="title_history">History</string>
+    <string name="title_favorite">Favorite songs</string>
 </resources>

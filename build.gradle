@@ -48,6 +48,8 @@ ext {
     rulesVersion = '1.0.1'
     espressoVersion = '3.0.1'
 
+    glide = '3.7.0'
+
     //Retrofit
     retrofit = '2.2.0'
     gson = '2.8.0'
