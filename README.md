@@ -36,9 +36,11 @@ Application is tested on Nexus 6 Android OS 7.1.1
 - AudioViewModelTest.java
 
 ** Instrumental testing: **
+
 -	AudioDaoTest.java
 
 ** UI Automation testing using Espresso: **
+
 - PlayListHomeActivity.java
 - UI Automation test cover below scenario 
   - Navigating to Favorite list
